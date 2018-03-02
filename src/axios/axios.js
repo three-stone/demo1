@@ -25,7 +25,7 @@ axios.interceptors.response.use(
             switch (error.response.status) {
                 case 401:
                     // 401 清除token信息并跳转到登录页面
-                    store.commit(types.LOGOUT);
+                    sessionStorage.removeItem('key')
                     this.$router.replace({
                         path: 'login',
                         query: {redirect: router.currentRoute.fullPath}
