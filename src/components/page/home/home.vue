@@ -54,10 +54,10 @@ import Footer from'../../common/footer'
 	export default {
         beforeCreate(){
             this.axios.get('/user/12345')
-                  .then(function(response) {
+                  .then((response)=> {
                     this.data=response.data;
                     this.dataimg=response.img;
-                  }).catch(function(error){
+                  }).catch((error)=>{
                     alert('error')
                   });
 
